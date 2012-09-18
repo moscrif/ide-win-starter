@@ -1,0 +1,53 @@
+object ErrorDialog: TErrorDialog
+  Left = 516
+  Height = 154
+  Top = 286
+  Width = 418
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Error Dialog'
+  ClientHeight = 154
+  ClientWidth = 418
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '0.9.30'
+  object Download: TButton
+    Left = 192
+    Height = 25
+    Top = 104
+    Width = 91
+    Caption = 'Download'
+    ModalResult = 1
+    OnClick = DownloadClick
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 288
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object mmError: TMemo
+    Left = 8
+    Height = 80
+    Top = 8
+    Width = 350
+    BorderStyle = bsNone
+    Color = clForm
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 88
+    Height = 25
+    Top = 104
+    Width = 91
+    Caption = 'Download'
+    OnClick = Button2Click
+    TabOrder = 3
+    Visible = False
+  end
+end
